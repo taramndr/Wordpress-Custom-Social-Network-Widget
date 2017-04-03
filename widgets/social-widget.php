@@ -13,7 +13,7 @@ class my_social_widget extends WP_Widget {
 	 		'my_social_widget', // Base ID
 			'Social Network Widget', // Name
 
-			array( 'description' => __( 'A widget to add url of your social network.', 'dmg' ), ) // Args
+			array( 'description' => __( 'A widget to add url of your social network.', 'mytheme' ), ) // Args
 			);
 	}
 
@@ -85,33 +85,33 @@ class my_social_widget extends WP_Widget {
 			$name = $instance[ 'name' ];
 		}
 		else {
-			$name = __( '', 'mywidget' );
+			$name = __( '', 'mytheme' );
 		}
 
 		if ( isset( $instance[ 'fb_link' ] ) ) {
 			$fb_link = $instance[ 'fb_link' ];
 		}
 		else {
-			$fb_link = __( '', 'mywidget' );
+			$fb_link = __( '', 'mytheme' );
 		}
 
 		if ( isset( $instance[ 'twt_link' ] ) ) {
 			$twt_link = $instance[ 'twt_link' ];
 		}
 		else {
-			$twt_link = __( '', 'mywidget' );
+			$twt_link = __( '', 'mytheme' );
 		}
 
 		if ( isset( $instance[ 'yt_link' ] ) ) {
 			$yt_link = $instance[ 'yt_link' ];
 		}
 		else {
-			$yt_link = __( '', 'mywidget' );
+			$yt_link = __( '', 'mytheme' );
 		} 
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('name'); ?>"><?php _e('Title', 'dmg'); ?></label><br />
+			<label for="<?php echo $this->get_field_id('name'); ?>"><?php _e('Title', 'mytheme'); ?></label><br />
 			<input type="text" name="<?php echo $this->get_field_name('name'); ?>" id="<?php echo $this->get_field_id('name'); ?>" value="<?php echo $name; ?>" class="widefat" />
 		</p>
 		<p>
